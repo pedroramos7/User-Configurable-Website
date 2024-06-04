@@ -29,7 +29,7 @@ const UserForm = () => {
 
   useEffect(() => {
     // Fetch existing data from backend on component mount
-    axios.get('http://localhost:5000/api/user')
+    axios.get('https://localhost:7107/api/Cv/1')
       .then(response => {
         const data = response.data;
         setName(data.name || '');
@@ -61,7 +61,7 @@ const UserForm = () => {
 
     try {
       console.log(formData); // Log the form data to the console
-      const response = await axios.post('http://localhost:5000/api/user', formData);
+      const response = await axios.post('https://localhost:7107/api/Cv/1', formData);
       console.log('Data submitted successfully:', response.data);
     } catch (error) {
       console.error('Error submitting data:', error);
